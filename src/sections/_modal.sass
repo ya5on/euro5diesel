@@ -1,0 +1,186 @@
+$body-bg: #c1bdba
+$form-bg: #13232f
+$white: #ffffff
+$main: #1ab188
+$main-light: lighten($main,5%)
+$main-dark: darken($main,5%)
+$gray-light: #a0b3b0
+$gray: #ddd
+$thin: 300
+$normal: 400
+$bold: 600
+$br: 4px
+
+.modal
+  position: fixed
+  left: 0
+  top: 0
+  z-index: 1043
+  height: 100%
+  width: 100%
+  background-color: rgba(0, 0, 0, .7)
+  transition: all 0.7s
+  display: flex
+  justify-content: center
+  align-items: center
+
+.form
+  position: relative
+  background: #fff
+  padding: 40px
+  max-width: 550px
+  width: 100%
+  margin: 40px auto
+  border-radius: $br
+  box-shadow: 0 4px 10px 4px rgba($form-bg,.3)
+  +sm(margin, 10px 20px)
+  +xs(padding, 30px 10px)
+
+
+.tab-group
+  list-style: none
+  padding: 0
+  margin: 0 0 40px 0
+  +sm(margin, 0 0 20px 0)
+  &:after
+    content: ""
+    display: table
+    clear: both
+
+  li a
+    display: block
+    text-decoration: none
+    padding: 15px
+    background: rgba($gray-light,.25)
+    color: $text-color
+    font-size: 20px
+    float: left
+    width: 50%
+    text-align: center
+    cursor: pointer
+    transition: .5s ease
+    +sm(font-size, 18px)
+    +xs(font-size, 16px)
+    &:hover
+      background: $orange-color
+      color: $text-color
+
+  .active
+    a
+      background: #6BB156
+      color: $text-color
+
+.tab-content > div:last-child
+  display: none
+
+h1
+  text-align: center
+  font-size: 22px
+  color: $text-color
+  font-weight: $thin
+  margin: 0 0 40px
+  +sm(margin, 0 0 20px)
+
+label
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  left: 20px
+  color: $gray-light
+  transition: all 0.25s ease
+  pointer-events: none
+  font-size: 18px
+
+label.active
+  transform: translateY(-38px)
+  left: 2px
+  font-size: 14px
+
+label.highlight
+  color: $text-color
+
+input, select
+  font-size: 18px
+  display: block
+  width: 100%
+  height: 40px
+  padding: 5px 10px
+  background: none
+  border: 1px solid $gray-light
+  color: $text-color
+  border-radius: 5px
+  text-indent: 10px
+  transition: border-color .25s ease, box-shadow .25s ease
+  &:focus
+    outline: 0
+    border-color: $main
+
+
+textarea
+  border: 2px solid $gray-light
+  resize: vertical
+
+.field-wrap
+  position: relative
+  margin-bottom: 20px
+  +xs(margin-bottom, 15px)
+
+  &:last-of-type
+    margin-bottom: 40px
+    +xs(margin-bottom, 20px)
+
+  &__date
+    display: flex
+    justify-content: space-between
+
+  &__input
+    width: 48%
+    color: $gray-light
+
+.button
+  border: 0
+  outline: none
+  border-radius: 5px
+  padding: 15px 0
+  font-size: 22px
+  font-weight: $bold
+  text-transform: uppercase
+  letter-spacing: .1em
+  background: #6BB156
+  color: $text-color
+  transition: all.5s ease
+  cursor: pointer
+  +sm(font-size, 18px)
+  &:hover, &:focus
+    background: $orange-color
+    color: $text-color
+
+.button-block
+  display: block
+  width: 100%
+
+.forgot
+  margin-top: -20px
+  text-align: right
+  +xs(margin-top, -10px)
+  +xs(margin-bottom, 5px)
+  a
+    color: #213b39
+
+.btn-close
+  width: 40px
+  height: 40px
+  position: absolute
+  top: 5px
+  right: 5px
+  color: #666
+  font-weight: 500
+  background: transparent
+  font-size: 30px
+  border: none
+  outline: none
+  cursor: pointer
+  +xs(top, -5px)
+
+  &:hover
+    color: #000

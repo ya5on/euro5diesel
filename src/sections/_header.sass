@@ -1,0 +1,149 @@
+.header
+  background: #FFFFFF
+  box-shadow: 0 4px 7px rgba(0, 0, 0, 0.1)
+  height: 100%
+  position: relative
+  z-index: 5
+
+  &__block
+    width: 100%
+    height: 90px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    +lg(height, 70px)
+    +md(height, 50px)
+
+    &--logo
+      max-width: 177px
+      width: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      height: 100%
+      background-color: #FFF858
+      +md(max-width, 100px)
+
+      img
+        +md(height, 40px)
+
+    &--nav
+      +sm(position, fixed)
+      +sm(top, 0)
+      +sm(left, 0)
+      +sm(z-index, 1)
+      +sm(width, 100%)
+      +sm(height, 100%)
+      +sm(background, $text-color)
+      +sm(padding, 100px 0 0 0)
+      +sm(transform, translate3d(0, -100%, 0))
+      +sm(overflow, auto)
+      transition: all .3s ease-out
+
+      &.active
+        transform: translate3d(0, 0, 0)
+
+      .nav-link
+        font-size: 18px
+        color: $text-color
+        margin: 0 50px
+        transition: all .3s ease
+        +lg(margin, 0 25px)
+        +md(font-size, 16px)
+        +sm(display, block)
+        +sm(color, #f5f5f5)
+        +sm(margin, 25px auto)
+        +sm(text-align, center)
+        +sm(font-size, 20px)
+
+        &:hover
+          color: #6BB156
+          border-bottom: 3px solid #6BB156
+          +sm(border, none)
+
+        &--active
+          width: 100%
+          border-bottom: 3px solid #6BB156
+          +sm(border, none)
+
+    &--account
+      max-width: 245px
+      width: 100%
+      height: 100%
+      background-color: $main-color
+      display: flex
+      justify-content: center
+      align-items: center
+      +md(justify-content, flex-end)
+      +md(background-color, transparent)
+      +md(max-width, 100px)
+
+      .acc-link
+        display: flex
+        justify-content: center
+        align-items: center
+        border: none
+        outline: none
+        background: transparent
+        font-size: 18px
+        cursor: pointer
+
+        img
+          width: 30px
+          height: 30px
+          margin-right: 10px
+          background-color: $main-color
+          +md(margin-right, 0px)
+          +md(border-radius, 50%)
+          +md(border, 1px solid $main-color)
+          +md(box-sizing, border-box)
+          +sm(margin-right, 17px)
+
+        span
+          color: #fff
+          +md(display, none)
+
+  &__burger
+    display: none
+    z-index: 2
+    +sm(display, block)
+    +sm(position, relative)
+    +sm(width, 25px)
+    +sm(height, 19px)
+
+    span
+      position: absolute
+      background-color: $main-color
+      width: 100%
+      height: 3px
+      right: 0
+      top: 8px
+      transition: all .3s ease-out
+
+    &:before,
+    &:after
+      content: ''
+      position: absolute
+      background-color: $main-color
+      width: 100%
+      height: 3px
+      right: 0
+      transition: all .3s ease-out
+      
+    &:before
+      top: 0
+      
+    &:after
+      bottom: 0
+
+.header__burger.active
+      &:before
+        transform: rotate(45deg)
+        top: 8px
+
+      &:after
+        transform: rotate(-45deg)
+        bottom: 8px
+
+      span
+        transform: scale(0)

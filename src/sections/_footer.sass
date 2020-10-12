@@ -1,0 +1,64 @@
+.footer
+  padding-top: 37px
+  padding-bottom: 30px
+  background-color: #C8CCCC
+
+  &__items
+    +row-flex
+    justify-content: space-between
+
+  &__item
+    +col
+    +size(3)
+    +size-sm(12)
+
+    p
+      font-weight: 600
+      margin-bottom: 16px
+      color: $text-color
+
+    a
+      font-weight: 500
+      color: $text-color
+      margin-bottom: 16px
+      &:hover
+        font-weight: 600
+
+    &--logo
+      +sm(display, flex)
+      +sm(justify-content, center)
+      +sm(align-items, center)
+
+    &--nav
+      display: flex
+      flex-direction: column
+      +sm(display, none)
+
+    &--contacts
+      display: flex
+      flex-direction: column
+      +sm(display, flex)
+      +sm(justify-content, center)
+      +sm(align-items, center)
+
+    &--social
+      display: flex
+      justify-content: center
+      +sm(display, flex)
+      +sm(justify-content, center)
+      +sm(align-items, center)
+
+      a
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 45px
+        height: 45px
+        border-radius: 50%
+        background-color: $main-color
+        margin: 0 5px
+        cursor: pointer
+        transition: all .3s ease-out
+
+        &:hover
+          transform: scale(.9)

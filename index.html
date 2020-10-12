@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!--    <link rel="icon" type="image/png" sizes="16x16" href="/dist/img/favs/16x16.png">-->
+<!--    <link rel="icon" type="image/png" sizes="48x48" href="/dist/img/favs/48x48.png">-->
+<!--    <link rel="icon" type="image/png" sizes="57x57" href="/dist/img/favs/57x57.png">-->
+<!--    <link rel="apple-touch-icon-precomposed" sizes="72x72" type="image/png" href="/dist/img/favs/72x72.png"/>-->
+<!--    <link rel="apple-touch-icon-precomposed" sizes="114x114" type="image/png" href="/dist/img/favs/114x114.png"/>-->
+    <title>Euro5Diesel</title>
+    <link rel="stylesheet" href="/dist/css/style.css">
+</head>
+<body>
+
+<!--modal: logIn, signUp-->
+<section class="modal hidden">
+    <div class="form">
+        <button type="button" class="btn-close">×</button>
+        <ul class="tab-group">
+            <li class="tab active">
+                <a href="#login">Увійти</a>
+            </li>
+            <li class="tab">
+                <a href="#signup">Реєстрація</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <!--            LOGIN-->
+            <div id="login">
+                <h1>Welcome Back!</h1>
+                <form action="" method="">
+                    <div class="field-wrap">
+                        <label>
+                            Логін
+                        </label>
+                        <input type="text" required autocomplete="off"/>
+                    </div>
+                    <div class="field-wrap">
+                        <label>
+                            Пароль
+                        </label>
+                        <input type="password" required autocomplete="off"/>
+                    </div>
+                    <p class="forgot"><a href="#">Forgot Password?</a></p>
+                    <button class="button button-block">Вхід</button>
+                </form>
+            </div>
+            <!--        //LOGIN-->
+            <!--            REGISTRATION-->
+            <div id="signup">
+                <h1>Реєстрація</h1>
+                <form action="" method="">
+                    <div class="field-wrap">
+                        <label>
+                            П.І.Б.<span class="req">*</span>
+                        </label>
+                        <input type="text" required autocomplete="off"/>
+                    </div>
+                    <div class="field-wrap">
+                        <label>
+                            Email<span class="req">*</span>
+                        </label>
+                        <input type="email" required autocomplete="off"/>
+                    </div>
+                    <div class="field-wrap">
+                        <label>
+                            +38 (0--) --- -- --<span class="req">*</span>
+                            <!-- https://www.npmjs.com/package/ngx-mask -->
+                        </label>
+                        <input type="email" required autocomplete="off"/>
+                    </div>
+                    <div class="field-wrap field-wrap__date">
+                        <input class="field-wrap__input"
+                               type="date"
+                               min="1900-01-01"
+                               max="2018-12-31"
+                               required>
+                        <select class="field-wrap__input">
+                            <option value="" hidden disabled selected>Стать</option>
+                            <option value="value1">Чоловiча</option>
+                            <option value="value2">Жiноча</option>
+                        </select>
+                    </div>
+                    <div class="field-wrap">
+                        <label>
+                            Пароль<span class="req">*</span>
+                        </label>
+                        <input type="password" required autocomplete="off"/>
+                    </div>
+                    <div class="field-wrap">
+                        <label>
+                            Повторити пароль<span class="req">*</span>
+                        </label>
+                        <input type="password" required autocomplete="off"/>
+                    </div>
+                    <button type="submit" class="button button-block">Зареєструватись</button>
+                </form>
+            </div>
+            <!--            //REGISTRATION-->
+        </div><!-- tab-content -->
+    </div> <!-- /form -->
+</section>
+<!--Дякуємо за відправлену заявку! modal-->
+<section class="ty hidden">
+    <div class="ty__content">
+        <button type="button" class="btn-close">×</button>
+        <p>Дякуємо за відправлену заявку!</p>
+        <span>Напротязі 10 хвилин з Вами зв’яжеться наш консультант
+та відповість на усі запитання.</span>
+        <div class="timer">09:55</div>
+    </div>
+</section>
+<!--//-->
+<!--header-->
+<header class="header" id="header">
+    <div class="container">
+        <div class="header__block">
+            <div class="header__block--logo">
+                <a href="/" class="logo">
+                    <img src="/dist/img/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header__block--nav">
+                <a href="#header" class="nav-link nav-link--active">Головна</a>
+                <a href="#about" class="nav-link">Про нас</a>
+                <a href="#rates" class="nav-link">Тарифи</a>
+                <a href="#map" class="nav-link">Контакти</a>
+            </div>
+            <div class="header__block--account">
+                <button type="button" class="acc-link">
+                    <img src="/dist/img/acc.png" alt="acc">
+                    <span>Особистий кабінет</span>
+                </button>
+                <div class="header__burger">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--SLIDER-->
+<section class="slider">
+    <!-- Slider main container -->
+    <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide" style="background-image: url(/dist/img/slider/bg.jpg)">
+                <div class="container">
+                    <h1 class="title">
+                        <span>АЗС</span>
+                        Euro5 diesel
+                    </h1>
+                    <h2 class="subtitle">
+                        Довіра. Гарантія. Якість.
+                    </h2>
+                    <button class="btn">
+                        Замовити
+                    </button>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="container">
+                    <h1 class="title">
+                        <span>АЗС</span>
+                        Euro5 diesel
+                    </h1>
+                    <h2 class="subtitle">
+                        Довіра. Гарантія. Якість.
+                    </h2>
+                    <button class="btn">
+                        Замовити
+                    </button>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="container">
+                    <h1 class="title">
+                        <span>АЗС</span>
+                        Euro5 diesel
+                    </h1>
+                    <h2 class="subtitle">
+                        Довіра. Гарантія. Якість.
+                    </h2>
+                    <button class="btn">
+                        Замовити
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- If we need navigation buttons -->
+        <div class="container relative">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+</section>
+<!--//SLIDER-->
+<!--ABOUT-->
+<section class="about" id="about">
+    <div class="container">
+        <h3>Про компанію</h3>
+        <div class="about__content">
+            <div class="about__text">
+                <p>У березні 2020 року компанія «Дизель Смарт» отримала офіційну ліцензію на право роздрібної торгівлі
+                    пальним на території Києва та міста Буча, Київської обл.
+                </p>
+                <p>Отриманий у той же період сертифікат від органу оцінки відповідності «Масма-Сепро» на дизельне паливо
+                    ДТ-Л-К5 (сорт С) гарантує якість пального, яке компанія постачає на власні автозаправні станції.</p>
+                <p>Саме тому мережа автозаправок EURO DIESEL - це ваш гарант якості за доступними цінами. Тільки у нас
+                    дизельне пальне європейського стандарту поєднується з індивідуальним підходом до кожного клієнта. Ми
+                    - молода прогресивна компанія, яка любить свою роботу і вірить, що в Україні можна заправляти дешево
+                    і якісно. Наша ціль - ваша вигода. І ми готові задовольнити ваші побажання!</p>
+            </div>
+            <div class="about__image">
+                <img src="/dist/img/about/1.png" alt="picture">
+            </div>
+        </div>
+    </div>
+</section>
+<!--//ABOUT-->
+<!--RATES-->
+<section class="rates" id="rates">
+    <div class="container">
+        <div class="rates__content">
+            <h3>тарифи</h3>
+            <div class="rates__items">
+                <div class="rates__item">
+                    <div class="rates__item--img">
+<!--                        <img src="" alt="picture">-->
+                    </div>
+                    <div class="rates__item--title">
+                        <h4>Тариф 1</h4>
+                    </div>
+                    <div class="rates__item--subtitle">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                    <button class="btn">Замовити</button>
+                </div>
+                <div class="rates__item">
+                    <div class="rates__item--img">
+<!--                        <img src="" alt="picture">-->
+                    </div>
+                    <div class="rates__item--title">
+                        <h4>Тариф 1</h4>
+                    </div>
+                    <div class="rates__item--subtitle">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                    <button class="btn">Замовити</button>
+                </div>
+                <div class="rates__item">
+                    <div class="rates__item--img">
+<!--                        <img src="" alt="picture">-->
+                    </div>
+                    <div class="rates__item--title">
+                        <h4>Тариф 1</h4>
+                    </div>
+                    <div class="rates__item--subtitle">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                    <button class="btn">Замовити</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--//RATES-->
+<!--CONSULT-->
+<section class="consult">
+    <div class="container">
+        <div class="consult__content">
+            <div class="consult__title">
+                <h3>Отримати консультацію:</h3>
+            </div>
+            <div class="consult__form">
+                <form action="">
+                    <input type="tel" placeholder="Номер телефону">
+                    <button class="btn">надіслати</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!--//CONSULT-->
+<!--MAP-->
+<section class="map" id="map">
+    <div class="container">
+        <div class="map__content">
+            <div class="map__title">
+                <h3>Карта</h3>
+            </div>
+            <div class="map__box">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2536.7519920220966!2d30.617893452359915!3d50.52018123604506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4d11d9c2203e9%3A0xb62c370e1702ccd6!2z0L_RgNC-0YHQvy4g0JLQu9Cw0LTQuNC80LjRgNCwINCc0LDRj9C60L7QstGB0LrQvtCz0L4sIDU0LzksINCa0LjQtdCyLCDQo9C60YDQsNC40L3QsCwgMDIwMDA!5e0!3m2!1sru!2sus!4v1601572192034!5m2!1sru!2sus"
+                        width="600" height="504" frameborder="0" style="border:0;" allowfullscreen=""
+                        aria-hidden="false" tabindex="0"></iframe>
+                <div class="map__contacts">
+                    <div class="map__contacts--social">
+                        <p>Соцмережі:</p>
+                        <a href="http://instagram.com" target="_blank">
+                            <img src="/dist/img/map/insta.png" alt="instagram">
+                        </a>
+                        <a href="http://facebook.com" target="_blank">
+                            <img src="/dist/img/map/fb.png" alt="fb">
+                        </a>
+                        <a href="http://youtube.com" target="_blank">
+                            <img src="/dist/img/map/youtube.png" alt="youtube">
+                        </a>
+                    </div>
+                    <div class="map__contacts--phone">
+                        <p>Телефон:</p>
+                        <a href="tel:+380555555555">+380 (55) 55 55 555</a>
+                    </div>
+                    <div class="map__contacts--email">
+                        <p>Email:</p>
+                        <a href="mailto:info@youremail.com">info@youremail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--//MAP-->
+<!--advantages-->
+<section class="advantages">
+    <div class="container">
+        <h3>наші переваги</h3>
+        <div class="advantages__items">
+            <div class="advantages__item">
+                <div class="advantages__item--img">
+                    <img src="/dist/img/advantages/gas.png" alt="picture">
+                </div>
+                <div class="advantages__item--title">
+                    <h4>якість</h4>
+                </div>
+                <div class="advantages__item--subtitle">
+                    <p>Сертифіковане дизельне пальне гарантованої якості ДТ-Л-К5, сорт С</p>
+                </div>
+            </div>
+            <div class="advantages__item">
+                <div class="advantages__item--img">
+                    <img src="/dist/img/advantages/pay.png" alt="picture">
+                </div>
+                <div class="advantages__item--title">
+                    <h4>Доступні ціни</h4>
+                </div>
+                <div class="advantages__item--subtitle">
+                    <p>Доступні ціни та гнучка цінова політика компанії</p>
+                </div>
+            </div>
+            <div class="advantages__item">
+                <div class="advantages__item--img">
+                    <img src="/dist/img/advantages/sale.png" alt="picture">
+                </div>
+                <div class="advantages__item--title">
+                    <h4>Лояльна ситстема</h4>
+                </div>
+                <div class="advantages__item--subtitle">
+                    <p>Можливі знижки для підприємств та організацій (до 10 вантажних машин)</p>
+                </div>
+            </div>
+        </div>
+        <div class="advantages__items">
+            <div class="advantages__item">
+                <div class="advantages__item--img">
+                    <img src="/dist/img/advantages/coronavirus.png" alt="picture">
+                </div>
+                <div class="advantages__item--title">
+                    <h4>Індивудуальний підхід</h4>
+                </div>
+                <div class="advantages__item--subtitle">
+                    <p>Індивідуальний підхід до кожного клієнта</p>
+                </div>
+            </div>
+            <div class="advantages__item">
+                <div class="advantages__item--img">
+                    <img src="/dist/img/advantages/person.png" alt="picture">
+                </div>
+                <div class="advantages__item--title">
+                    <h4>досвідчений Персонал</h4>
+                </div>
+                <div class="advantages__item--subtitle">
+                    <p>Досвідчений та кваліфікований персонал, високий рівень обслуговування</p>
+                </div>
+            </div>
+            <div class="advantages__item">
+                <div class="advantages__item--img">
+                    <img src="/dist/img/advantages/location.png" alt="picture">
+                </div>
+                <div class="advantages__item--title">
+                    <h4>Зручне розташування</h4>
+                </div>
+                <div class="advantages__item--subtitle">
+                    <p>Зручне розташування вздовж великих автошляхів міжнародного значення
+                        <br>(МО6 Київ-Чоп, МО7 Київ-Ковель-Ягодин)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--//advantages-->
+<!--ORDER-->
+<section class="order">
+    <div class="container">
+        <span>економ свій час та кошти купуй пальне на</span>
+        <h2>АЗС Euro5 diesel</h2>
+        <button class="btn">Замовити</button>
+    </div>
+</section>
+<!--//ORDER-->
+<!--FOOTER-->
+<footer class="footer">
+    <div class="container">
+        <div class="footer__items">
+            <div class="footer__item footer__item--logo">
+                <a href="/">
+                    <img src="/dist/img/footer/footer-logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="footer__item footer__item--nav">
+                <p>Меню:</p>
+                <a href="#header">Головна</a>
+                <a href="#about">Про нас</a>
+                <a href="#map">Контакти</a>
+                <a href="#rates">Тарифи</a>
+            </div>
+            <div class="footer__item footer__item--contacts">
+                <p>Контакти:</p>
+                <a href="tel:+380666666666">+380 (66) 66 66 666</a>
+                <a href="mailto:info@youremail.com">info@youremail.com</a>
+            </div>
+            <div class="footer__item footer__item--social">
+                <a href="http://instagram.com" target="_blank">
+                    <img src="/dist/img/footer/insta.png" alt="instagram">
+                </a>
+                <a href="http://facebook.com" target="_blank">
+                    <img src="/dist/img/footer/fb.png" alt="fb">
+                </a>
+                <a href="http://youtube.com" target="_blank">
+                    <img src="/dist/img/footer/youtube.png" alt="youtube">
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--//FOOTER-->
+<!--btn to top-->
+<a href="#" id="scroll" style="display: none;"><span></span></a>
+<script src="/dist/js/libs.js"></script>
+<script src="/dist/js/app.js"></script>
+</body>
+</html>

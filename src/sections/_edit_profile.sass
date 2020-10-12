@@ -1,0 +1,101 @@
+.edit
+
+  &__item
+    +row-flex
+    justify-content: space-around
+    margin-top: 43px
+    background: #FFFFFF
+    border: 3px solid #E1E1DD
+    box-sizing: border-box
+    border-radius: 5px
+    +md(margin, 25px 10px)
+
+  &__photo
+    +col
+    +size(4)
+    +size-sm(12)
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin-top: 40px
+    +sm(margin-top, 20px)
+
+    .box
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 174px
+      height: 174px
+      background: #6BB156
+      border-radius: 50%
+      overflow: hidden
+      margin-bottom: 11px
+      +sm(width, 115px)
+      +sm(height, 115px)
+
+
+    .custom-file-input
+      color: transparent
+      border: none
+      padding: 0
+      width: initial
+
+    .custom-file-input::-webkit-file-upload-button
+      visibility: hidden
+
+    .custom-file-input::before
+      content: 'Змінити фото'
+      display: block
+      padding: 5px 8px
+      outline: none
+      white-space: nowrap
+      -webkit-user-select: none
+      cursor: pointer
+      font-size: 18px
+      color: $main-color
+      text-decoration: underline
+      text-align: center
+
+    .custom-file-input:hover::before
+      border-color: black
+
+    .custom-file-input:active
+      outline: 0
+
+  &__data
+    +col
+    +size(8)
+    +size-sm(12)
+    margin-top: 40px
+    width: 100%
+    max-width: 700px
+    +sm(margin-top, 20px)
+
+    .info-wrapper
+      span
+        font-size: 18px
+        display: block
+        width: 100%
+        padding: 10px 10px
+        text-indent: 10px
+        color: #213b39
+        border: 1px solid #a0b3b0
+        border-radius: 5px
+        background: 0 0
+        margin-bottom: 20px
+
+    .btns
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+      margin-bottom: 30px
+
+    .btn
+      border: 3px solid #6BB156
+      border-radius: 5px
+      color: $main-color
+      font-weight: 600
+      margin-top: auto
+      max-width: 210px
+      font-size: 16px
+      height: 50px

@@ -1,0 +1,180 @@
+.profile
+
+  &__logout
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    margin-top: 43px
+
+  &__link
+    color: #6BB156
+    font-weight: normal
+    font-size: 18px
+    text-decoration: underline
+    margin-right: 24px
+
+  &__btn
+    border-radius: 5px
+    width: 100%
+    max-width: 86px
+    text-align: center
+    background: transparent
+    border: 1px solid #E44E4E
+    outline: none
+    padding: 5px 15px
+    font-size: 18px
+    color: #E44E4E
+    cursor: pointer
+    transition: all .3s ease
+    text-transform: initial
+
+  h4
+    font-weight: 600
+    font-size: 18px
+    line-height: 22px
+    color: $text-color
+    text-align: center
+    margin-top: -12px
+    padding-bottom: 30px
+    border-bottom: 1px solid #EFEFEF
+    +sm(margin-top, 20px)
+    +sm(font-size, 20px)
+
+  &__items
+    +row-flex
+    justify-content: space-between
+    margin-top: 60px
+    margin-bottom: 30px
+
+  &__item
+    +col
+    +size(4)
+    +size-sm(12)
+    background: #FFFFFF
+    border: 3px solid #E1E1DD
+    box-sizing: border-box
+    border-radius: 5px
+    padding: 50px
+    +md(padding, 35px 20px)
+    +sm(padding, 20px)
+    +sm(margin-bottom, 20px)
+
+
+  .info
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+    &__photo
+      width: 174px
+      height: 174px
+      background: #6BB156
+      border-radius: 50%
+      display: flex
+      justify-content: center
+      align-items: center
+      overflow: hidden
+      margin-top: -140px
+      margin-bottom: 40px
+      +sm(width, 115px)
+      +sm(height, 115px)
+      +sm(margin-top, 20px)
+
+    p
+      font-size: 18px
+      color: $text-color
+      text-align: left
+      width: 100%
+      padding: 15px 0
+      border-bottom: 1px solid #EFEFEF
+      +sm(text-align, center)
+
+
+  .acct
+    display: flex
+    flex-direction: column
+    align-items: center
+
+    .money
+      font-weight: 300
+      font-size: 55px
+      line-height: 192.5%
+      color: #6BB156
+      text-align: center
+      padding-bottom: 15px
+      border-bottom: 1px solid #EFEFEF
+      +lg(font-size, 45px)
+      +md(font-size, 40px)
+      +sm(font-size, 33px)
+
+      span
+        font-size: 24px
+        +sm(font-size, 18px)
+
+    .btn
+      border: 3px solid #6BB156
+      border-radius: 5px
+      color: $main-color
+      font-weight: 600
+      margin-top: auto
+
+  .sert
+    padding: 40px
+
+    &__img
+      display: flex
+      justify-content: center
+      flex-wrap: nowrap
+      width: 100%
+      padding-top: 30px
+
+      img
+        height: auto
+        width: 100%
+        max-width: 120px
+        margin: 5px
+        +md(max-width, 100px)
+
+  &__history
+    display: flex
+    justify-content: flex-start
+    margin-bottom: 30px
+
+    &--item
+      width: 100%
+      max-width: 770px
+      background: #FFFFFF
+      border: 3px solid #E1E1DD
+      box-sizing: border-box
+      border-radius: 5px
+      padding: 50px
+      +sm(padding, 20px)
+
+      h4
+        text-align: left
+        border: none
+      li
+        +row-flex
+        justify-content: flex-start
+
+        .date
+          +col
+          +size(1.5)
+          +size-sm(4)
+          color: #C4C4C4
+
+        .price
+          +col
+          +size(2.5)
+          +size-sm(7)
+          color: #6BB156
+
+        .information
+          +col
+          +size(8)
+          +size-sm(12)
+
+      p
+        font-size: 18px
+        padding: 10px 0

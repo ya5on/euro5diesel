@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--    <link rel="icon" type="image/png" sizes="16x16" href="/dist/img/favs/16x16.png">-->
+    <!--    <link rel="icon" type="image/png" sizes="48x48" href="/dist/img/favs/48x48.png">-->
+    <!--    <link rel="icon" type="image/png" sizes="57x57" href="/dist/img/favs/57x57.png">-->
+    <!--    <link rel="apple-touch-icon-precomposed" sizes="72x72" type="image/png" href="/dist/img/favs/72x72.png"/>-->
+    <!--    <link rel="apple-touch-icon-precomposed" sizes="114x114" type="image/png" href="/dist/img/favs/114x114.png"/>-->
+    <title>Особистий кабінет</title>
+    <link rel="stylesheet" href="/dist/css/style.css">
+</head>
+<body>
+<!--header-->
+<header class="header" id="header">
+    <div class="container">
+        <div class="header__block">
+            <div class="header__block--logo">
+                <a href="/" class="logo">
+                    <img src="/dist/img/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header__block--nav">
+                <a href="#header" class="nav-link nav-link--active">Головна</a>
+                <a href="#about" class="nav-link">Про нас</a>
+                <a href="#rates" class="nav-link">Тарифи</a>
+                <a href="#map" class="nav-link">Контакти</a>
+            </div>
+            <div class="header__block--account">
+                <button type="button" class="acc-link">
+                    <img src="/dist/img/acc.png" alt="acc">
+                    <span>Особистий кабінет</span>
+                </button>
+                <div class="header__burger">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="edit">
+    <div class="container">
+        <div class="edit__item">
+            <div class="edit__photo">
+                <div class="box">
+                    <img src="/dist/img/profile/profile_img.png" alt="profile_image">
+                </div>
+                <input type="file" class="custom-file-input">
+            </div>
+            <div class="edit__data">
+
+                <!--   ссылка на готовый компонент на ангуларе для редактирования профиля, может подойдет: https://codepen.io/DonPage/pen/HCjem --> 
+
+                <div class="info-wrapper">
+                    <!-- Default Information -->
+                    <span ng-switch-default>{{person.name}}</span>
+                    <span ng-switch-default>{{person.birthday}}</span>
+                    <span ng-switch-default>{{person.phone}}</span>
+                    <span ng-switch-default>{{person.email}}</span>
+                    <span ng-switch-default>{{person.pass}}</span>
+                    <!-- Edit Fields -->
+                    <!--                    <span ng-switch-when="true">-->
+                    <!--                        <input ng-model="editObject.name" placeholder="Name" type="text"/>-->
+                    <!--                    </span>-->
+                    <!--                    <span ng-switch-when="true" class="birthday">-->
+                    <!--                        <input ng-model="editObject.birthday" id="birthday" type="date" placeholder="birthday"/>-->
+                    <!--                    </span>-->
+                    <!--                    <span ng-switch-when="true" class="phone">-->
+                    <!--                        <input ng-model="editObject.phone" type="text" placeholder="Phone"/>-->
+                    <!--                    </span>-->
+                    <!--                    <span ng-switch-when="true" class="email">-->
+                    <!--                        <input ng-model="editObject.email" type="text" placeholder="Email"/>-->
+                    <!--                    </span>-->
+                    <!--                    <span ng-switch-when="true" class="pass">-->
+                    <!--                        <input ng-model="editObject.pass" type="text" placeholder="Password"/>-->
+                    <!--                    </span>-->
+                    <!--Buttons for editing -->
+                    <div class="btns">
+                        <button class="btn" ng-switch-default ng-click="editingPerson($index)">Редагувати</button>
+                        <!--                    <button class="green" ng-switch-when="true" ng-click="saveEdit($index)">save</button>-->
+                        <!--                    <button class="red" ng-switch-when="true" ng-click="cancelEdit()">X</button>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="/dist/js/libs.js"></script>
+<script src="/dist/js/app.js"></script>
+</body>
+</html>
